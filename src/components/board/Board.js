@@ -2,8 +2,18 @@ import React, { Component } from 'react';
 import Row from './Row.js';
 
 export default class Board extends Component {
-	constructor() {
-		super();
+	constructor(props){
+		super(props);
+
+		this.handleClick = this.handleClick.bind(this);
+		// this.state = {
+		// 	bioClass: 'bioText',
+		// };
+	}
+
+	handleClick(){
+		console.log('Row: ' + this.row);
+		console.log('Space: ' + this.space);
 	}
 
 	render() {
@@ -13,7 +23,7 @@ export default class Board extends Component {
 					<div className='col-md-12'>
 						<div className='boardContainer'>
 							<div className='rowOne'>
-								<Row row='1'/>
+								<Row row='1' handleClick={this.handleClick} />
 							</div>
 							<div className='rowTwo'>
 								<Row row='2'/>
