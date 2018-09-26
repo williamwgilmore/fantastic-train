@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Row from './Row.js';
 import Town from './Town.js';
 
 export default class Board extends Component {
@@ -6,9 +7,7 @@ export default class Board extends Component {
 		super(props);
 
 		this.handleClick = this.handleClick.bind(this);
-		// this.state = {
-		// 	bioClass: 'bioText',
-		// };
+
 	}
 
 	handleClick(){
@@ -18,8 +17,11 @@ export default class Board extends Component {
 	render() {
 		return (
 			<div className='board fullHeight'>
-				<Town />
-				<Town />
+				<Row />
+				<Row />
+				<Row />
+				<Row />
+				<Row />
 			</div>
 		);
 	}

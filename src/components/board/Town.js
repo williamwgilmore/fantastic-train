@@ -37,8 +37,8 @@ export default class Town extends Component {
 						<div><p>Level: &nbsp;&nbsp;{this.state.level}</p></div>
 						<div><p>Health: {this.state.health}</p></div>
 						<div><p>Gold: &nbsp;&nbsp;&nbsp;{this.state.gold}</p></div>
-						<input onChange={this.updateGold}></input>
-						<button onClick={this.adjustGold}>Gold</button>
+						<input onChange={this.updateGold} className='fixWidth'></input>
+						<button onClick={this.adjustGold}>Add Gold</button>
 					</div>
 				</div>
 			</div>
